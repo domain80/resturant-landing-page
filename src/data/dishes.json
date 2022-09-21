@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Salmon Salad",
+        "calories": "150 calories", 
+        "time": "15 minutes", 
+        "person": "2 Person",
+        "image": "./images/salmonSalad.png",        
+        "imageLarge": "./images/salmonSalad-Large.png"
+    },
+    {
+        "name": "Raw Salmon Salad",
+        "calories": "170 calories", 
+        "time": "10 minutes", 
+        "person": "1 Person",
+        "image": "./images/rawSalmonSalad.png",        
+        "imageLarge": "./images/rawSalmonSalad-Large.png"
+    },
+    {
+        "name": "Salmon Stack",
+        "calories": "300 calories", 
+        "time": "25 minutes", 
+        "person": "2 Person",
+        "image": "./images/salmonStack.png",        
+        "imageLarge": "./images/salmonStack-Large.png"
+    },
+    {
+        "name": "Chicken with Rice",
+        "calories": "750 calories", 
+        "time": "35 minutes", 
+        "person": "3 Person",
+        "image": "./images/chickenRice.png",        
+        "imageLarge": "./images/chickenRice-Large.png"
+    }
+]
