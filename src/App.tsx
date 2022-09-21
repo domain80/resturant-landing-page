@@ -37,16 +37,16 @@ export default App;
 function LargScreen() {
   const [currentIndex, setCurrentIndex]: [number, Function] = useState(0);
   return (
-    <div className="App container  mx-auto px-10 bg-background bg-center  bg-cover min-h-screen  min-w-full">
-          <section className="hero mx-auto w-max relative  max-w-lg -mt-10">
+    <div className="App container mx-auto px-10 bg-background bg-center  bg-cover min-h-screen  min-w-full">
+          <section className="hero mx-auto w-max relative p-14 max-w-md -mt-10">
             <img
               src={dishes[currentIndex].imageLarge}
               alt={dishes[currentIndex].name}
             />
           </section>
-          <div className="flex -mt-72 pb-4 justify-around max-w-max gap-20 mx-auto items-center">
+          <div className="flex -mt-56 pb-4 justify-around max-w-max gap-20 mx-auto items-center">
             {dishes.map((item) => {
-              return <Card {...{ ...item }} />;
+              return <Card dish={item} onClickHandler={setCurrentIndex}/>;
             })}
           </div>
         </div>
@@ -57,7 +57,7 @@ function MobileScreen() {
   const [currentIndex, setCurrentIndex] : [number, Function] = useState(1); 
   return (
     <div className="flex items-center justify-center App container mx-auto px-14 bg-background bg-cover bg-center min-h-screen min-w-full">
-      <CardMobile dishes={dishes} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
+      <CardMobile dishes={dishes} currentIndex={currentIndex} onClickHandler={setCurrentIndex} />
     </div>
   )
 }

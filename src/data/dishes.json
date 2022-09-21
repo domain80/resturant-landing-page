@@ -1,5 +1,6 @@
 [
     {
+        "id": 0,
         "name": "Salmon in the Salad",
         "calories": "150 calories", 
         "time": "15 minutes", 
@@ -8,6 +9,7 @@
         "imageLarge": "./images/salmonSalad-Large.png"
     },
     {
+        "id": 1,
         "name": "Raw Salmon Salad",
         "calories": "170 calories", 
         "time": "10 minutes", 
@@ -16,6 +18,7 @@
         "imageLarge": "./images/rawSalmonSalad-Large.png"
     },
     {
+        "id": 2,
         "name": "Salmon Stack",
         "calories": "300 calories", 
         "time": "25 minutes", 
@@ -24,6 +27,7 @@
         "imageLarge": "./images/salmonStack-Large.png"
     },
     {
+        "id": 3,
         "name": "Chicken with Rice",
         "calories": "750 calories", 
         "time": "35 minutes", 
