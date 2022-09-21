@@ -57,7 +57,7 @@ function MobileScreen() {
   const [currentIndex, setCurrentIndex] : [number, Function] = useState(1); 
   return (
     <div className="flex items-center justify-center App container mx-auto px-14 bg-background bg-cover bg-center min-h-screen min-w-full">
-      <CardMobile dishes={dishes} currentIndex={currentIndex} />
+      <CardMobile dishes={dishes} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
     </div>
   )
 }
