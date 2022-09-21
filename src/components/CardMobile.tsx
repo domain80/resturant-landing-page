@@ -1,5 +1,3 @@
-import React from "react";
-
 type DishType = {
   name: string;
   calories: string;
@@ -9,10 +7,7 @@ type DishType = {
   imageLarge: string;
 };
 
-const CardMobile = ({ ...props }: any) => {
-  const dishes: DishType[] = props.dishes;
-  const currentIndex: number = props.currentIndex;
-  const setCurrentIndex: Function = props.setCurrentIndex;
+const CardMobile = ({ dishes, currentIndex, onClickHandler }: {dishes: DishType[]; currentIndex: number; onClickHandler: Function}) => {
 
   const { name, calories, time, person, image, imageLarge }: DishType =
     dishes[currentIndex];
@@ -23,12 +18,12 @@ const CardMobile = ({ ...props }: any) => {
 
         <div>
           {currentIndex === 0
-            ? OtherDishes(dishes, [1, 2, 3], setCurrentIndex)
+            ? OtherDishes(dishes, [1, 2, 3], onClickHandler)
             : currentIndex === 1
-            ? OtherDishes(dishes, [0, 2, 3], setCurrentIndex)
+            ? OtherDishes(dishes, [0, 2, 3], onClickHandler)
             : currentIndex === 2
-            ? OtherDishes(dishes, [0, 1, 3], setCurrentIndex)
-            : OtherDishes(dishes, [0, 1, 2], setCurrentIndex)}
+            ? OtherDishes(dishes, [0, 1, 3], onClickHandler)
+            : OtherDishes(dishes, [0, 1, 2], onClickHandler)}
         </div>
       </picture>
       <figcaption className="rounded-3xl pt-44 min-w-[18rem] bg-white bg-opacity-60 px-5 shadow-lg shadow-neutral-400">
@@ -64,25 +59,25 @@ const CardMobile = ({ ...props }: any) => {
 
 export default CardMobile;
 
-function OtherDishes(dishes: DishType[], oIndexes: number[], setCurrentIndex: Function) {
+function OtherDishes(dishes: DishType[], oIndexes: number[], onClickHandler: Function) {
   return (
     <>
       <img
         src={dishes[oIndexes[0]].image}
         alt={dishes[oIndexes[0]].name}
-        onClick={() => setCurrentIndex(oIndexes[0])}
+        onClick={() => onClickHandler(oIndexes[0])}
         className="absolute left-[-1em]  drop-shadow top-[1em] w-[3.8rem] h-[3.8rem] active:scale-150 transition-transform "
       />
       <img
         src={dishes[oIndexes[1]].image}
         alt={dishes[oIndexes[1]].name}
-        onClick={() => setCurrentIndex(oIndexes[1])}
+        onClick={() => onClickHandler(oIndexes[1])}
         className="absolute left-[20%] drop-shadow  top-[5.4em] w-[3.8rem] h-[3.8rem] active:scale-150 transition-transform "
       />
       <img
         src={dishes[oIndexes[2]].image}
         alt={dishes[oIndexes[2]].name}
-        onClick={() => setCurrentIndex(oIndexes[2])}
+        onClick={() => onClickHandler(oIndexes[2])}
         className="absolute left-[60%] drop-shadow top-[5.3em] w-[3.5rem] h-[3.5rem] active:scale-150 transition-transform "
       />
     </>

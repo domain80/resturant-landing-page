@@ -5,8 +5,8 @@
         "calories": "150 calories", 
         "time": "15 minutes", 
         "person": "2 Person",
-        "image": "./images/salmonSalad.png",        
-        "imageLarge": "./images/salmonSalad-Large.png"
+        "image": "/images/salmonSalad.png",        
+        "imageLarge": "/images/salmonSalad-Large.png"
     },
     {
         "id": 1,
@@ -14,8 +14,8 @@
         "calories": "170 calories", 
         "time": "10 minutes", 
         "person": "1 Person",
-        "image": "./images/rawSalmonSalad.png",        
-        "imageLarge": "./images/rawSalmonSalad-Large.png"
+        "image": "/images/rawSalmonSalad.png",        
+        "imageLarge": "/images/rawSalmonSalad-Large.png"
     },
     {
         "id": 2,
@@ -23,8 +23,8 @@
         "calories": "300 calories", 
         "time": "25 minutes", 
         "person": "2 Person",
-        "image": "./images/salmonStack.png",        
-        "imageLarge": "./images/salmonStack-Large.png"
+        "image": "/images/salmonStack.png",        
+        "imageLarge": "/images/salmonStack-Large.png"
     },
     {
         "id": 3,
@@ -32,7 +32,7 @@
         "calories": "750 calories", 
         "time": "35 minutes", 
         "person": "3 Person",
-        "image": "./images/chickenRice.png",        
-        "imageLarge": "./images/chickenRice-Large.png"
+        "image": "/images/chickenRice.png",        
+        "imageLarge": "/images/chickenRice-Large.png"
     }
 ]
