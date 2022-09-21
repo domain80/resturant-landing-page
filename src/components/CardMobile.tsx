@@ -18,8 +18,8 @@ const CardMobile = ({ ...props }: any) => {
     dishes[currentIndex];
   return (
     <figure className="relative ">
-      <picture>
-        <img src={imageLarge} alt={name} className="absolute -top-36" />
+      <picture className="">
+        <img src={imageLarge} alt={name} className="absolute -top-36 max-w-[14rem] left-8" />
 
         <div>
           {currentIndex === 0
@@ -31,7 +31,7 @@ const CardMobile = ({ ...props }: any) => {
             : OtherDishes(dishes, [0, 1, 2], setCurrentIndex)}
         </div>
       </picture>
-      <figcaption className="rounded-3xl pt-44 bg-white bg-opacity-60 px-5 shadow-lg shadow-neutral-400">
+      <figcaption className="rounded-3xl pt-44 min-w-[18rem] bg-white bg-opacity-60 px-5 shadow-lg shadow-neutral-400">
         <header className="text-center w-full ">
           <h1 className="mb-3 font-bold text-bold text-4xl leading-tight  mx-auto flex flex-col">
             <span>{name.split(" ")[0]} </span>
@@ -47,7 +47,7 @@ const CardMobile = ({ ...props }: any) => {
           </p>
         </header>
 
-        <div className="py-5 pb-10 flex justify-between items-center gap-16">
+        <div className="py-5 px-5 pb-10 flex justify-between items-center gap-14">
           <div className="flex flex-col gap-2">
             <span className="text-gray-400 font-semibold">Time</span>
             <span className="font-bold text-sm">{time}</span>
@@ -71,19 +71,19 @@ function OtherDishes(dishes: DishType[], oIndexes: number[], setCurrentIndex: Fu
         src={dishes[oIndexes[0]].image}
         alt={dishes[oIndexes[0]].name}
         onClick={() => setCurrentIndex(oIndexes[0])}
-        className="absolute left-[-1em]  top-[1em] w-[3.3rem] h-[3.3rem] active:scale-150 transition-transform "
+        className="absolute left-[-1em]  drop-shadow top-[1em] w-[3.8rem] h-[3.8rem] active:scale-150 transition-transform "
       />
       <img
         src={dishes[oIndexes[1]].image}
         alt={dishes[oIndexes[1]].name}
         onClick={() => setCurrentIndex(oIndexes[1])}
-        className="absolute left-[20%] top-[5.4em] w-[3.3rem] h-[3.3rem] active:scale-150 transition-transform "
+        className="absolute left-[20%] drop-shadow  top-[5.4em] w-[3.8rem] h-[3.8rem] active:scale-150 transition-transform "
       />
       <img
         src={dishes[oIndexes[2]].image}
         alt={dishes[oIndexes[2]].name}
         onClick={() => setCurrentIndex(oIndexes[2])}
-        className="absolute left-[60%] top-[5.3em] w-[3rem] h-[3rem] active:scale-150 transition-transform "
+        className="absolute left-[60%] drop-shadow top-[5.3em] w-[3.5rem] h-[3.5rem] active:scale-150 transition-transform "
       />
     </>
   );
